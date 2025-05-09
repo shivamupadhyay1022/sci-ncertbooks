@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, BookOpen, Filter } from 'lucide-react';
 import BookCard from '../components/BookCard';
+import BookHierarchy from '../components/BookHierarchy';
 
 // Sample book data organized by categories
 const booksByCategory = {
@@ -120,7 +121,7 @@ function Books() {
             Explore our comprehensive collection of NCERT textbooks for all classes and subjects.
             Start your learning journey today!
           </p>
-          
+
           {/* Search Bar */}
           <div className="flex flex-col sm:flex-row gap-4 max-w-3xl">
             <div className="relative flex-grow">
@@ -226,6 +227,14 @@ function Books() {
           </p>
         </div>
       )}
+
+      {/* Firebase Book Hierarchy */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+          Browse Books by Hierarchy
+        </h2>
+        <BookHierarchy />
+      </div>
 
       {/* Featured Section */}
       <div className="mt-16">

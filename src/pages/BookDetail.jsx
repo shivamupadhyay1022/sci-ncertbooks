@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BookOpen, Download, Share } from 'lucide-react';
 
 function BookDetail() {
-  // This would typically come from route params or context
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  // This would typically come from an API call using the ID
   const book = {
-    id: 1,
+    id: id || 1,
     title: 'Mathematics - Class 10',
     subject: 'Mathematics',
     class: 'Class 10',
@@ -13,6 +16,10 @@ function BookDetail() {
     description: 'This mathematics textbook for Class 10 covers algebra, geometry, trigonometry, and more, following the latest NCERT curriculum.',
     isNew: true,
     image: 'https://placeholder.com/book-cover-math-10'
+  };
+
+  const handleStartReading = () => {
+    navigate(`/read/${book.id}`);
   };
 
   return (
@@ -27,8 +34,8 @@ function BookDetail() {
           {/* Book cover */}
           <div className="w-full md:w-1/3 lg:w-1/4">
             <div className="bg-gray-200 dark:bg-gray-700 rounded-lg aspect-[3/4] relative overflow-hidden">
-              <img 
-                src={book.image} 
+              <img
+                src={book.image}
                 alt={book.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
@@ -62,7 +69,10 @@ function BookDetail() {
             <p className="text-gray-600 dark:text-gray-300 mb-8">{book.description}</p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-md transition-colors duration-300 flex items-center gap-2">
+              <button
+                onClick={handleStartReading}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-md transition-colors duration-300 flex items-center gap-2"
+              >
                 <BookOpen size={18} />
                 Start Reading
               </button>
@@ -82,7 +92,7 @@ function BookDetail() {
       {/* What's Inside section */}
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">What's Inside</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Feature 1 */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">

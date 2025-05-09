@@ -62,6 +62,7 @@ const Navbar = () => {
               <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
               <Link to="/about" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">About</Link>
               <Link to="/resources" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">Resources</Link>
+              <Link to="/books" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">Books</Link>
               <Link to="/blog" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
               <Link to="/contact" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
             </div>
@@ -81,13 +82,13 @@ const Navbar = () => {
             </form>
             
             {/* Theme toggle */}
-            <button 
+            {/* <button 
               onClick={toggleDarkMode} 
               className="p-2 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}
@@ -125,6 +126,7 @@ const Navbar = () => {
             <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
             <Link to="/about" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">About</Link>
             <Link to="/resources" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">Resources</Link>
+            <Link to="/books" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">Books</Link>
             <Link to="/blog" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">Blog</Link>
             <Link to="/contact" className="text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
           </div>

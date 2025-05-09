@@ -7,20 +7,27 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "firebase:setup": "node scripts/firebase-setup.js",
+    "firebase:push": "node scripts/push-to-firebase.js"
   },
   "dependencies": {
+    "@capacitor/android": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
     "@tailwindcss/vite": "^4.1.4",
+    "firebase": "^11.7.1",
     "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
+    "react-pdf": "^9.2.1",
     "react-router-dom": "^7.5.3",
     "react-toastify": "^11.0.5",
     "recharts": "^2.15.3",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
+    "@capacitor/cli": "^7.2.0",
     "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
