@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import BookDetail from './pages/BookDetail';
 import Books from './pages/Books';
 import ReadBook from './pages/ReadBook';
+import PrivacyPolicy from './pages/Privacypolicy';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/books/:id" element={<BookDetail/>} />
                 <Route path="/books" element={<Books/>} />
+                <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
                 <Route path="/topics" element={<div className="text-gray-800 dark:text-white">Topics Search</div>} />
               </Routes>
             </div>

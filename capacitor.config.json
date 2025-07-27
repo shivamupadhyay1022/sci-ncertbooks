@@ -1,5 +1,8 @@
 {
   "appId": "com.thesci.ncert",
   "appName": "Ncert Books",
-  "webDir": "dist"
+  "webDir": "dist",
+  "server" :{
+    "url":"https://sci-ncertbooks.web.app/"
+  }
 }
